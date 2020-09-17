@@ -20,7 +20,7 @@ PlayerBeyond a gaming news app for the new gamer!  The Target Audience is people
 
 
 # Screenshot 
-![Screenshot](https://https://user-images.githubusercontent.com/65379991/93390717-258dd600-f83c-11ea-9ed6-38ae9c2406c9.png "Screenshot")
+![Screenshot](https://user-images.githubusercontent.com/65379991/93390717-258dd600-f83c-11ea-9ed6-38ae9c2406c9.png "Screenshot")
 
 
 <!-- LICENSE -->
