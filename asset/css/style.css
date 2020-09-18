@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+   /* apply styles to <header> */
+   header {
+    padding: 20px 35px;
+  }
+  
+  header h1 {
+    font-weight: bold;
+    font-size: 26px;
+    color: lightblue;
+    margin: 0;
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  header a {
+    text-decoration: none;
+    color: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  header nav {
+    float: right;
+    margin: 7px 0;
+  }
+  
+  header nav ul li {
+    display: inline;
+  }
+  
+  header nav ul li a {
+    margin: 0 30px;
+    font-weight: lighter;
+    font-size: 16px;
+  }
