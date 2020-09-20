@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+   /* apply styles to <header> */
+   header {
+    padding: 20px 35px;
+  }
+
+  
+  header h1 {
+    font-weight: bold;
+    font-size: 26px;
+    color: lightblue;
+    margin: 0;
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  header a {
+    text-decoration: none;
+    color: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  header a:hover {
+      color: lightgrey;
+  }
+  
+  header nav {
+    float: right;
+    margin: 7px 0;
+  }
+  
+  header nav ul li {
+    display: inline;
+  }
+  
+  header nav ul li a {
+    margin: 0 30px;
+    font-weight: lighter;
+    font-size: 16px;
+  }
+
+  body {
+    background-image: url('../images/landing-page.jpg');
+    background-size: 100%;
+    width: flex;
+    padding-top: 50px;
+  }
+
+
+
+  .intro {
+      font-size: 50px;
+      font-weight: lighter;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+  }
+
+
+  .section-title {
+    font-size: 90px;
+    color: lightgray;
+    padding-top: 80px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    display: inline-block;
+    max-width: 80%; 
+  }
+
+
+  .section-title p {
+    font-size: 20px;
+    color: lightgray;
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    max-width: 80%;
+    
+  }
+
+  /* horizontal rule, can be used later on News Page */
+  /* .primary-border {
+    border-color: #fce138;
+  } */
+.button {
+    border-radius: 8px;
+    align-content: center;
+    width: 80px;
+    margin: auto;
+}
+
+/* Foundation CSS */
+
+  @media screen and (max-width: 39.9375em) {
+    .button.small-only-expanded {
+      display: block;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0; } }
+  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .button.medium-only-expanded {
+      display: block;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0; } }
+  @media screen and (max-width: 63.9375em) {
+    .button.medium-down-expanded {
+      display: block;
+      width: 63.9375em;
+      margin-right: auto;
+      margin-left: auto; } }
+  @media print, screen and (min-width: 40em) {
+    .button.medium-expanded {
+      display: block;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0; } }
+  @media screen and (min-width: 64em) and (max-width: 74.9375em) {
+    .button.large-only-expanded {
+      display: block;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0; } }
+  @media screen and (max-width: 74.9375em) {
+    .button.large-down-expanded {
+      display: block;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0; } }
+  @media print, screen and (min-width: 64em) {
+    .button.large-expanded {
+      display: block;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0; } }
