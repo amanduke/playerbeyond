@@ -1,3 +1,22 @@
+window.addEventListener('load', function() {
+    var searchBar = document.querySelector("#search");
+
+    searchBar.addEventListener('keyup', function(event) {
+        if(event.key == 'Enter') {
+            fetch('https://cors-anywhere.herokuapp.com/http://www.gamespot.com/api/games/?api_key=d5f9d95899dd3f623ef0db6a138808c83f7967cd&format=json&filter=genres:' 
+            + encodeURIComponent(searchBar.value))
+            
+            
+            .then(function(searchBar) {
+                return searchBar.json();
+                
+            })
+            .then(function(data) {
+                console.log(data);
+            })
+        }
+    });
+});
 // fetch('https://cors-anywhere.herokuapp.com/https://api-v3.igdb.com/games/', {
 //   headers: {
 //     'user-key': '21bc044a492256eb1717ed91dd67cbc1'
@@ -20,40 +39,50 @@
 
 
 
-    fetch('https://cors-anywhere.herokuapp.com/https://api-v3.igdb.com/games/', {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'user-key': '21bc044a492256eb1717ed91dd67cbc1'
-      },
-      body: 'search "fallout"; '
-    })
-      .then(data => data.json())
-      .then(response => console.log(response));
+    // fetch('https://cors-anywhere.herokuapp.com/https://api-v3.igdb.com/games/', {
+    //   method: 'POST',
+    //   headers: {
+    //     Accept: 'application/json',
+    //     'user-key': '21bc044a492256eb1717ed91dd67cbc1'
+    //   },
+    //   body: 'search "fallout"; '
+    // })
+    //   .then(data => data.json())
+    //   .then(response => console.log(response));
+
+    // &filter=name:skyrim
 
 
+// fetch('https://cors-anywhere.herokuapp.com/http://www.gamespot.com/api/games/?api_key=d5f9d95899dd3f623ef0db6a138808c83f7967cd&format=json&filter=name:' 
+// + searchBar + 'd5f9d95899dd3f623ef0db6a138808c83f7967cd')
+
+// // Add another fetch call to filter by genre.
+// fetch('https://cors-anywhere.herokuapp.com/http://www.gamespot.com/api/games/?api_key=d5f9d95899dd3f623ef0db6a138808c83f7967cd&format=json&filter=genres:' 
+// + searchBar.value)
 
 
-fetch('https://cors-anywhere.herokuapp.com/https://www.gamespot.com/api/releases/?api_key=d5f9d95899dd3f623ef0db6a138808c83f7967cd')
+// .then(function(searchBar) {
+//     return searchBar.json();
+    
+// })
+// .then(function(data) {
+//     console.log(data);
+// })
 
-.then(function(response) {
-    return response.json();
-})
-.then(function(data) {
-    console.log(data);
-})
 
-
-fetch("https://cors-anywhere.herokuapp.com/https://whatoplay.p.rapidapi.com/game/?game_id=%3Crequired%3E", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "whatoplay.p.rapidapi.com",
-		"x-rapidapi-key": "6163485b7bmsh9693ebb0587cf03p1d5ee0jsn4d2061252a39"
-	}
-})
-.then(response => {
-	console.log(response);
-})
-.catch(err => {
-	console.log(err);
-});
+// fetch("https://cors-anywhere.herokuapp.com/https://whatoplay.p.rapidapi.com/game/?game_id=%3Crequired%3E", {
+// 	"method": "GET",
+// 	"headers": {
+// 		"x-rapidapi-host": "whatoplay.p.rapidapi.com",
+// 		"x-rapidapi-key": "6163485b7bmsh9693ebb0587cf03p1d5ee0jsn4d2061252a39"
+// 	}
+// })
+// .then(function(response) {
+//   return response.json();
+// })
+// .then(function(data) {
+//   console.log(data);
+// })
+// .catch(err => {
+// 	console.log(err);
+// });
