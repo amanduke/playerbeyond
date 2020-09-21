@@ -15,14 +15,14 @@
     font-weight: bold;
     font-size: 26px;
     color: lightblue;
-    margin: 0;
-    display: inline;
     font-family: Arial, Helvetica, sans-serif;
+    display: inline;
+    margin: 0 55px;
   }
   header a {
     text-decoration: none;
     color: lightblue;
-    font-family: Arial, Helvetica, sans-serif;
+    width: flex;
   }
 
   header a:hover {
@@ -32,6 +32,8 @@
   header nav {
     float: right;
     margin: 7px 0;
+    align-content: flex-end;
+    width: flex;
   }
   
   header nav ul li {
@@ -40,13 +42,13 @@
   
   header nav ul li a {
     margin: 0 30px;
-    font-weight: lighter;
+    font-weight: medium;
     font-size: 16px;
   }
 
   body {
     background-image: url('../images/landing-page.jpg');
-    background-size: 100%;
+    background-size: 150%;
     width: flex;
     padding-top: 50px;
   }
@@ -56,31 +58,27 @@
   .intro {
       font-size: 50px;
       font-weight: lighter;
-      font-family: Arial, Helvetica, sans-serif;
       text-align: center;
   }
-
-
-  .section-title {
-    font-size: 90px;
-    color: lightgray;
-    padding-top: 80px;
-    padding-right: 20px;
-    padding-bottom: 50px;
-    padding-left: 100px;
-    max-width: 70%; 
-  }
-
 
   .section-title p {
     font-size: 20px;
     color: lightgray;
-    padding-top: 30px;
-    padding-right: 20px;
-    padding-bottom: 50px;
-    padding-left: 100px;
-    max-width: 80%;
-    
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 100px;
+    width: flex;
+    text-align: center;
+  }
+  
+
+  .section-title {
+    background-image: url('../images/player-beyond-logo.png');
+    background-size: 70%;
+    width: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px;
   }
 
   /* horizontal rule, can be used later on News Page */
@@ -89,10 +87,17 @@
   } */
 .button {
     border-radius: 8px;
-    align-content: center;
-    width: 80px;
-    margin: auto;
+    width: 90px;
+    margin: 0 20px;
 }
+
+
+/* search bar icon */
+
+.search-bar-icon:before {
+    content: "\&#x1f50d";
+}
+
 
 /* Foundation CSS */
 
