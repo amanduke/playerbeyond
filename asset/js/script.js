@@ -1,3 +1,15 @@
+
+
+// variable for the button
+document.getElementById("enter").addEventListener("click");
+
+
+
+function enter() {
+    onclick="location.href='news.html';";
+}
+
+
 window.addEventListener('load', function() {
     var searchBar = document.querySelector("#search");
 
