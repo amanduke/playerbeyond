@@ -112,7 +112,7 @@
 .article-row-section {
   max-width: 75rem;
   margin-right: auto;
-  margin-left: auto;
+  margin-left: 10%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: inline-flex;
@@ -123,7 +123,8 @@
       -ms-flex-pack: center;
           justify-content: center;
           float: left;
-          width: 75%;
+          width: 70%;
+          height: 30%;
 }
 
 .article-row-section-inner {
@@ -311,7 +312,7 @@
 }
 
 
-
+/* the word News at the top */
 .newsheader {
     font-weight: bold;
     font-size: 52px;
