@@ -3,7 +3,7 @@ window.addEventListener('load', function() {
 
     searchBar.addEventListener('keyup', function(event) {
         if(event.key == 'Enter') {
-            fetch('https://cors-anywhere.herokuapp.com/http://www.gamespot.com/api/games/?api_key=d5f9d95899dd3f623ef0db6a138808c83f7967cd&format=json&filter=genres:' 
+            fetch('https://cors-anywhere.herokuapp.com/http://www.gamespot.com/api/releases/?api_key=d5f9d95899dd3f623ef0db6a138808c83f7967cd&format=json&name=' 
             + encodeURIComponent(searchBar.value))
             
             
@@ -13,7 +13,11 @@ window.addEventListener('load', function() {
             })
             .then(function(data) {
                 console.log(data);
+                // make a loop for listing out games by genre.
+
+                
             })
+            searchBar.value = "" 
         }
     });
 });
