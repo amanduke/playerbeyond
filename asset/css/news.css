@@ -329,7 +329,10 @@
 }
 
 
-
+img {
+  height: 250px;
+  width: 250px;
+}
 /* .marketing-site-footer {
   
   color: #8aa0ae;
