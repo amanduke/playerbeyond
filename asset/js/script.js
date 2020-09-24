@@ -2,55 +2,54 @@ window.addEventListener('load', function() {
     var searchBar = document.querySelector("#search");
 
     searchBar.addEventListener('keyup', function(event) {
-        console.log(searchBar.value)
         if(event.key == 'Enter') {
-<<<<<<< HEAD
-            fetch('https://cors-anywhere.herokuapp.com/http://www.gamespot.com/api/reviews/?api_key=d5f9d95899dd3f623ef0db6a138808c83f7967cd&format=json&filter=title:' 
+            
+            fetch('https://cors-anywhere.herokuapp.com/http://www.gamespot.com/api/games/?api_key=d5f9d95899dd3f623ef0db6a138808c83f7967cd&format=json&filter=name:'
             + encodeURIComponent(searchBar.value)
             )
-=======
-            fetch('https://cors-anywhere.herokuapp.com/http://www.gamespot.com/api/releases/?api_key=d5f9d95899dd3f623ef0db6a138808c83f7967cd&format=json&name=' 
-            + encodeURIComponent(searchBar.value))
->>>>>>> e1d3b99... changed html name
             
             
             .then(function(searchBar) {
                 return searchBar.json();
-                
+ 
             })
             .then(function(data) {
                 console.log(data);
-<<<<<<< HEAD
-                
-                
 
-                var resultsRes = data.results[0].release_date;
-                var resultsName = data.results[0].name;
-                var resultsDes = data.results[0].description;
-                var resultsImage = data.results[0].image.original;
-                document.getElementById("results").innerHTML = resultsRes;
-                document.getElementById("results").innerHTML = resultsName;
-                document.getElementById("results").innerHTML = resultsDes;
-                document.getElementById("results").innerHTML = `<img src = ` + resultsImage + `>`;
+                var resultsName;
+                var resultsRel;
+                var resultsImage;
 
-                console.log('result')
-=======
-                // make a loop for listing out games by genre.
+                for (i = 0; i <= 5; i++) {
+                    resultsName = data.results[i].name;
+                    document.getElementById("name"+i).innerHTML = resultsName;
+                    resultsRel = data.results[i].release_date;
+                    document.getElementById("release"+i).innerHTML = resultsRel;
+                    resultsImage = data.results[i].image.original;
+                    document.getElementById("image"+i).innerHTML = `<img src = ` + resultsImage + `>`;
+                }
 
+        
+                fetch('https://cors-anywhere.herokuapp.com/http://www.gamespot.com/api/reviews/?api_key=d5f9d95899dd3f623ef0db6a138808c83f7967cd&format=json&filter=title:'
+                + encodeURIComponent (searchBar.value))
                 
->>>>>>> e1d3b99... changed html name
+                .then(function(results){
+                    return results.json();
+                    
+                })
+
+                .then(function(res) {
+                    console.log(res);
+                    console.log('test' + searchBar.value)
+
+                    // var resultsDes = res.results[0].deck;
+                    // document.getElementById("description").innerHTML = resultsDes;
+                })
             })
-            searchBar.value = "" 
+            // searchBar.value = "" 
         }
     });
 });
-// fetch('https://cors-anywhere.herokuapp.com/https://api-v3.igdb.com/games/', {
-//   headers: {
-//     'user-key': '21bc044a492256eb1717ed91dd67cbc1'
-//   }
-// })
-//   .then(data => data.json())
-//   .then(response => console.log(response));
 
 //   fetch('https://cors-anywhere.herokuapp.com/https://api-v3.igdb.com/games', {
 //     method: 'POST',
