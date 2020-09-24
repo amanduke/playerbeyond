@@ -4,14 +4,9 @@ window.addEventListener('load', function() {
     searchBar.addEventListener('keyup', function(event) {
         console.log(searchBar.value)
         if(event.key == 'Enter') {
-<<<<<<< HEAD
             fetch('https://cors-anywhere.herokuapp.com/http://www.gamespot.com/api/reviews/?api_key=d5f9d95899dd3f623ef0db6a138808c83f7967cd&format=json&filter=title:' 
             + encodeURIComponent(searchBar.value)
             )
-=======
-            fetch('https://cors-anywhere.herokuapp.com/http://www.gamespot.com/api/releases/?api_key=d5f9d95899dd3f623ef0db6a138808c83f7967cd&format=json&name=' 
-            + encodeURIComponent(searchBar.value))
->>>>>>> e1d3b99... changed html name
             
             
             .then(function(searchBar) {
@@ -20,7 +15,6 @@ window.addEventListener('load', function() {
             })
             .then(function(data) {
                 console.log(data);
-<<<<<<< HEAD
                 
                 
 
@@ -34,11 +28,6 @@ window.addEventListener('load', function() {
                 document.getElementById("results").innerHTML = `<img src = ` + resultsImage + `>`;
 
                 console.log('result')
-=======
-                // make a loop for listing out games by genre.
-
-                
->>>>>>> e1d3b99... changed html name
             })
             searchBar.value = "" 
         }
