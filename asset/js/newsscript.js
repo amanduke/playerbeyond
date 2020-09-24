@@ -11,18 +11,18 @@
 
 
 window.addEventListener('load', function() {
-    var searchBar = document.querySelector("#search");
+    var newsBar = document.querySelector("#news");
 
-    searchBar.addEventListener('keyup', function(event) {
+    newsBar.addEventListener('keyup', function(event) {
         if(event.key == 'Enter') {
             
-            fetch('https://cors-anywhere.herokuapp.com/http://www.gamespot.com/api/games/?api_key=d5f9d95899dd3f623ef0db6a138808c83f7967cd&format=json&filter=name:'
-            + encodeURIComponent(searchBar.value)
+            fetch('https://cors-anywhere.herokuapp.com/http://www.gamespot.com/api/articles/?api_key=d5f9d95899dd3f623ef0db6a138808c83f7967cd&format=json&filter=title:'
+            + encodeURIComponent(newsBar.value)
             )
             
             
-            .then(function(searchBar) {
-                return searchBar.json();
+            .then(function(newsBar) {
+                return newsBar.json();
  
             })
             .then(function(data) {
@@ -46,7 +46,7 @@ window.addEventListener('load', function() {
 
         
                 fetch('https://cors-anywhere.herokuapp.com/http://www.gamespot.com/api/reviews/?api_key=d5f9d95899dd3f623ef0db6a138808c83f7967cd&format=json&filter=title:'
-                + encodeURIComponent (searchBar.value))
+                + encodeURIComponent (newsBar.value))
                 
                 .then(function(results){
                     return results.json();
@@ -55,7 +55,7 @@ window.addEventListener('load', function() {
 
                 .then(function(res) {
                     console.log(res);
-                    console.log('test' + searchBar.value)
+                    console.log('test' + newsBar.value)
 
                     var resultsDes;
 
