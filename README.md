@@ -12,7 +12,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-PlayerBeyond a gaming news app for the new gamer!  The Target Audience is people who are looking to get into gaming and does not know where to start. It’s a third party app showcasing Popular games, pro gamers, and different types of gameplay. 
+PlayerBeyond a gaming news app for the new gamer!  The Target Audience is people who are looking to get into gaming and don't know where to start. It’s a third party app showcasing Popular games, gaming news, and different types of information pertaining to the gaming world. 
 
 
 # User Story
