@@ -45,12 +45,12 @@ function storedData() {
     displayGames();
 }
 
-// Saves the city array to local storage
+// Saves the games array to local storage
 function storedGamesArray() {
     localStorage.setItem("games", JSON.stringify(gamesList));
 }
 
-// Saves the currently display city to local storage
+// Saves the currently display games to local storage
 function storedCurrentGames() {
     localStorage.setItem("currentGame", JSON.stringify(resultsName))
 }
