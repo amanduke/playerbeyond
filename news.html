@@ -8,6 +8,7 @@
 
     <!-- <script src="/asset/script.js"></script> -->
     <script type="text/javascript" src="asset/js/script.js"></script>
+    <script type="text/javascript" src="asset/js/newsscript.js"></script>
      <!-- fonts for site, Raleway and Lato -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;1,100;1,300&family=Raleway:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
     <!-- Compressed CSS -->
@@ -29,14 +30,23 @@
     <nav>
         <!-- Unorder list element -->
         <ul>
+          <li>
+            <a href="Games.html">Games</a>
+        </li>
         <li>
+          <button onclick="newsFunction()">
             <a href="news.html">NEWS</a>
+          </button>
         </li>
 
         <li>
             <!-- Make a search bar. -->
-            <input id= "search" placeholder="Search..."> </input>
-            <a href="#search">&#128269</a>
+            <input id= "gamesInput" placeholder="Search Game or Series" />
+            <div id="message"></div>
+
+            <button class = "btnSearch" type="button" id="gameSearchBtn" >
+                <a href="#search">&#128269</a>
+            </button>
         </li>
         </ul>
     </nav>
@@ -47,10 +57,46 @@
 <hr></hr>
 </div>
 
+<section class = "containerNews">
+  <div>
+<!-- new divs for 'for' loop -->
+      <div id = 'news-title0' ></div>
+      <div id = 'news-date0' ></div>
+      <div id = 'news-image0' ></div>
+      <div id = 'news-body0' ></div>
+
+      <div id = 'news-title1' ></div>
+      <div id = 'news-date1' ></div>
+      <div id = 'news-image1' ></div>
+      <div id = 'news-body1' ></div>
+
+      <div id = 'news-title2' ></div>
+      <div id = 'news-date2' ></div>
+      <div id = 'news-image2' ></div>
+      <div id = 'news-body2' ></div>
+
+      <div id = 'news-title3' ></div>
+      <div id = 'news-date3' ></div>
+      <div id = 'news-image3' ></div>
+      <div id = 'news-body3' ></div>
+
+      <div id = 'news-title4' ></div>
+      <div id = 'news-date4' ></div>
+      <div id = 'news-image4' ></div>
+      <div id = 'news-body4' ></div>
+
+      <div id = 'news-title5' ></div>
+      <div id = 'news-date5' ></div>
+      <div id = 'news-image5' ></div>
+      <div id = 'news-body5' ></div>
+  </div>
+</section>
+
 <!-- category selector -->
 <section class="product-filters">
 <div class="product-filters">
 
+  <button id= "latestNews" onclick="newsFunction()">Latest Gaming News</button>
    
    <h1 class="product-filters-header hide-for-small-only">Latest&#127759;</h1>
    <ul class="vertical menu hide-for-small-only" data-accordion-menu>
