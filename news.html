@@ -42,13 +42,19 @@
             <a href="#livefeed">LIVEFEED</a>
         </li>
         <li>
+          <button onclick="newsFunction()">
             <a href="news.html">NEWS</a>
+          </button>
         </li>
 
         <li>
             <!-- Make a search bar. -->
-            <input id= "search" placeholder="Search..."> </input>
-            <a href="#search">&#128269</a>
+            <input id= "gamesInput" placeholder="Search Game or Series" />
+            <div id="message"></div>
+
+            <button class = "btnSearch" type="button" id="gameSearchBtn" >
+                <a href="#search">&#128269</a>
+            </button>
         </li>
         </ul>
     </nav>
@@ -121,6 +127,8 @@
         <div id = 'description5' ></div>
     </div>
 </section>
+
+<div id="news-header"></div>
 
 </body>
 
