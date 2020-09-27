@@ -48,7 +48,7 @@ function storedData() {
 
 // Saves the games array to local storage
 function storedGamesArray() {
-    localStorage.setItem("gamesInput", JSON.stringify(gamesList));
+    localStorage.setItem("games", JSON.stringify(gamesList));
 }
 
 // Saves the currently display games to local storage
@@ -69,7 +69,7 @@ $("#gameSearchBtn").on("click", function(event){
 
     }else if (gamesList.length >= 5){
         gamesList.shift();
-        gamesList.push(cityName);
+        gamesList.push(resultsName);
 
     }else{
         gamesList.push(resultsName);
