@@ -1,14 +1,5 @@
 
 
-// variable for the button
-// document.getElementById("enter").addEventListener("click");
-
-
-
-// function enter() {
-//     onclick="location.href='news.html';";
-// }
-
 document.getElementById("latestNews").onclick = function() {newsFunction()};
 
 function newsFunction(){
