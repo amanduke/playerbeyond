@@ -14,6 +14,7 @@ storedData();
 function renderGames(){
     $("#gamesList").empty();
     $("#searchInput").val("");
+    console.log(gamesList)
 
     for (i=0; i<gamesList.length; i++){
         var a = $("<a>");
@@ -47,7 +48,7 @@ function storedData() {
 
 // Saves the games array to local storage
 function storedGamesArray() {
-    localStorage.setItem("games", JSON.stringify(gamesList));
+    localStorage.setItem("gamesInput", JSON.stringify(gamesList));
 }
 
 // Saves the currently display games to local storage
@@ -87,65 +88,74 @@ $("gamesInput").keypress(function(e){
     }
 })
 
-// When the page load the games from local strage are displayed. 
-window.addEventListener('load', function displayGames() {
-        var searchBar = document.querySelector("#gamesInput");
+function displayGames() {
+    var searchBar = document.querySelector("#gamesInput");
     
-        searchBar.addEventListener('keyup', function(event) {
-            if(event.key == 'Enter') {
-                
-                fetch('https://cors-anywhere.herokuapp.com/http://www.gamespot.com/api/games/?api_key=d5f9d95899dd3f623ef0db6a138808c83f7967cd&format=json&filter=name:'
-                + encodeURIComponent(searchBar.value)
-                )
-                
-                
-                .then(function(searchBar) {
-                    return searchBar.json();
-     
-                })
-                .then(function(data) {
-                    console.log(data);
-    
-    
-    
-                    for (i = 0; i <= 5; i++) {
-                        resultsName = data.results[i].name;
-                        document.getElementById("name"+i).innerHTML = resultsName;
-                        resultsRel = data.results[i].release_date;
-                        document.getElementById("release"+i).innerHTML = resultsRel;
-                        resultsImage = data.results[i].image.original;
-                        document.getElementById("image"+i).innerHTML = `<img src = ` + resultsImage + `>`;
-                        resultsDeck = data.results[i].deck;
-                        document.getElementById("deck"+i).innerHTML = resultsDeck;
-                    }
-    
+    searchBar.addEventListener('keyup', function(event) {
+        if(event.key == 'Enter') {
             
-                    fetch('https://cors-anywhere.herokuapp.com/http://www.gamespot.com/api/reviews/?api_key=d5f9d95899dd3f623ef0db6a138808c83f7967cd&format=json&filter=title:'
-                    + encodeURIComponent (searchBar.value))
+            fetch('https://cors-anywhere.herokuapp.com/http://www.gamespot.com/api/games/?api_key=d5f9d95899dd3f623ef0db6a138808c83f7967cd&format=json&filter=name:'
+            + encodeURIComponent(searchBar.value)
+            )
+            
+            
+            .then(function(searchBar) {
+                return searchBar.json();
+ 
+            })
+            .then(function(data) {
+                console.log(data);
+
+                gamesList.push(searchBar.value);
+                console.log(gamesList)
+
+                for (i = 0; i <= 5; i++) {
+                    resultsName = data.results[i].name;
+                    document.getElementById("name"+i).innerHTML = resultsName;
+                    resultsRel = data.results[i].release_date;
+                    document.getElementById("release"+i).innerHTML = resultsRel;
+                    resultsImage = data.results[i].image.original;
+                    document.getElementById("image"+i).innerHTML = `<img src = ` + resultsImage + `>`;
+                    resultsDeck = data.results[i].deck;
+                    document.getElementById("deck"+i).innerHTML = resultsDeck;
+                }
+                storedGamesArray();
+                renderGames();
+                
+                fetch('https://cors-anywhere.herokuapp.com/http://www.gamespot.com/api/reviews/?api_key=d5f9d95899dd3f623ef0db6a138808c83f7967cd&format=json&filter=title:'
+                + encodeURIComponent (searchBar.value))
+                
+                .then(function(results){
+                    return results.json();
                     
-                    .then(function(results){
-                        return results.json();
-                        
-                    })
-    
-                    .then(function(res) {
-                        console.log(res);
-                        console.log('test' + searchBar.value)
-    
-                        var resultsDes;
-    
-                        for (i = 0; i <= 5; i++){
-                        resultsDes = res.results[i].body;
-                        document.getElementById("description"+i).innerHTML = resultsDes;
-                        }
-    
-                        
-                    })
                 })
-                // searchBar.value = "" 
-            }
-        });
+
+                .then(function(res) {
+                    console.log(res);
+                    console.log('test' + searchBar.value)
+
+                    var resultsDes;
+
+                    for (i = 0; i <= 5; i++){
+                    resultsDes = res.results[i].body;
+                    document.getElementById("description"+i).innerHTML = resultsDes;
+                    }
+
+                    
+                })
+            })
+            
+        }
+        
     });
+    
+};
+
+
+
+// When the page load the games from local strage are displayed. 
+window.addEventListener('load', displayGames);
+       
 
 // Passes the games into the history list to the displayGames function
 function historyDisplayGames(){
