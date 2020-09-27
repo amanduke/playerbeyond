@@ -153,7 +153,7 @@ function displayGames() {
 
 
 
-// When the page load the games from local strage are displayed. 
+// When the page load the games from local storage are displayed. 
 window.addEventListener('load', displayGames);
        
 
@@ -162,8 +162,12 @@ function historyDisplayGames(){
     resultsName = $(this).attr("dataName");
     displayGames();
     console.log(resultsName);
-
 }
+
+// function clearDisplayedGames(){
+//     $("#clearStorage").on("click", function(event){
+//         event.preventDefault();
+// });
 
 //   fetch('https://cors-anywhere.herokuapp.com/https://api-v3.igdb.com/games', {
 //     method: 'POST',
@@ -214,5 +218,3 @@ function historyDisplayGames(){
 // .catch(err => {
 // 	console.log(err);
 // });
-
-
