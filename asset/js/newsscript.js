@@ -1,6 +1,6 @@
 
 
-document.getElementById("latestNews").onclick = function() {newsFunction()};
+document.getElementById("gameSearchBtn").onclick = function() {newsFunction()};
 
 function newsFunction(){
     fetch('https://cors-anywhere.herokuapp.com/http://www.gamespot.com/api/articles/?api_key=d5f9d95899dd3f623ef0db6a138808c83f7967cd&format=json&sort=publish_date:desc')

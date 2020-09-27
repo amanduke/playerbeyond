@@ -87,16 +87,16 @@ $("gamesInput").keypress(function(e){
         $("#gamesSearchBtn").click();
     }
 })
+document.getElementById("gameSearchBtn").onclick = function() {displayGames()};
 
 function displayGames() {
     var searchBar = document.querySelector("#gamesInput");
     
-    searchBar.addEventListener('keyup', function(event) {
-        if(event.key == 'Enter') {
+    // searchBar.addEventListener('keyup', function(event) {
+    //     if(event.key == 'Enter') {
             
             fetch('https://cors-anywhere.herokuapp.com/http://www.gamespot.com/api/games/?api_key=d5f9d95899dd3f623ef0db6a138808c83f7967cd&format=json&filter=name:'
-            + encodeURIComponent(searchBar.value)
-            )
+            + encodeURIComponent(searchBar.value))
             
             
             .then(function(searchBar) {
@@ -145,9 +145,9 @@ function displayGames() {
                 })
             })
             
-        }
+        // }
         
-    });
+    // });
     
 };
 
