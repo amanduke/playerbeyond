@@ -165,15 +165,15 @@ function historyDisplayGames(){
     console.log(resultsName);
 }
 
-function clearStorage() {
-window.localStorage.clear();
-}
-
 
 $('#clear-storage').on('click', function(event){
     event.preventDefault();
     clearStorage();
 });
+
+function clearStorage() {
+    window.localStorage.clear();
+    }
 
 
 //   fetch('https://cors-anywhere.herokuapp.com/https://api-v3.igdb.com/games', {
