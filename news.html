@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='icon' href="asset/images/favicon-32.png" type="image/x-icon"/>
     <title>PlayerBeyond</title>
-
-    <!-- <script src="/asset/script.js"></script> -->
-    <script type="text/javascript" src="asset/js/script.js"></script>
+    
+    <script async src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
      <!-- fonts for site, Raleway and Lato -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;1,100;1,300&family=Raleway:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
     <!-- Compressed CSS -->
@@ -22,24 +22,28 @@
 <!--navigation-->
     <header>
         <h1>
-        <a href="/">
+        <a href="index.html">
         PlayerBeyond
       </a>
     </h1>
     <nav>
         <!-- Unorder list element -->
         <ul>
-
-        <!-- list item elemnt-->
-        
+          <li>
+            <a href="Games.html">GAMES</a>
+        </li>
         <li>
             <a href="news.html">NEWS</a>
         </li>
 
         <li>
             <!-- Make a search bar. -->
-            <input id= "search" placeholder="Search..."> </input>
-            <a href="#search">&#128269</a>
+            <input id= "gamesInput" placeholder="Search Game or Series" />
+            <div id="message"></div>
+
+            <button class = "btnSearch" type="button" id="gameSearchBtn" >
+                <a href="#search">&#128269</a>
+            </button>
         </li>
         </ul>
     </nav>
@@ -50,10 +54,50 @@
 <hr></hr>
 </div>
 
+<!-- Games List -->
+<div class="listGroup" id="gamesList"></div> 
+<div id="clear-storage">CLEAR</div>
+
+<section class = "containerNews">
+  <div>
+<!-- new divs for 'for' loop -->
+      <div id = 'news-title0' ></div>
+      <div id = 'news-date0' ></div>
+      <div id = 'news-image0' ></div>
+      <div id = 'news-body0' ></div>
+
+      <div id = 'news-title1' ></div>
+      <div id = 'news-date1' ></div>
+      <div id = 'news-image1' ></div>
+      <div id = 'news-body1' ></div>
+
+      <div id = 'news-title2' ></div>
+      <div id = 'news-date2' ></div>
+      <div id = 'news-image2' ></div>
+      <div id = 'news-body2' ></div>
+
+      <div id = 'news-title3' ></div>
+      <div id = 'news-date3' ></div>
+      <div id = 'news-image3' ></div>
+      <div id = 'news-body3' ></div>
+
+      <div id = 'news-title4' ></div>
+      <div id = 'news-date4' ></div>
+      <div id = 'news-image4' ></div>
+      <div id = 'news-body4' ></div>
+
+      <div id = 'news-title5' ></div>
+      <div id = 'news-date5' ></div>
+      <div id = 'news-image5' ></div>
+      <div id = 'news-body5' ></div>
+  </div>
+</section>
+
 <!-- category selector -->
 <section class="product-filters">
 <div class="product-filters">
 
+  <button id= "latestNews" onclick="newsFunction()">Latest Gaming News</button>
    
    <h1 class="product-filters-header hide-for-small-only">Latest&#127759;</h1>
    <ul class="vertical menu hide-for-small-only" data-accordion-menu>
@@ -81,50 +125,42 @@
         <section class="article-row-section">
       <!-- <h2 class="article-row-section-header">News</h2> -->
   
-      <a href="#">
+      <a href="https://blog.playstation.com/2020/09/24/how-hangar-13-remade-mafia/">
         <article class="article-row">
           <div class="article-row-img">
-            <img src="https://placehold.it/200" alt="picture of a whale eating a donkey" />
+            <img class="img" src="https://blog.playstation.com/tachyon/2020/09/50375482006_7c978f60f7_o.jpg?resize=1088,612&crop_strategy=smart&zoom=0.5" alt="picture of a man in front of car" />
           </div>
           <div class="article-row-content">
-            <h1 class="article-row-content-header">HOW SPENDING $162,301.42 ON CLOTHES MADE ME $692,500</h1>
-  
-            <p class="article-row-content-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quia sit ullam, assumenda et. est at. Minima cum enim, vero eligendi perspiciatis similique modi voluptatem officia fugiat.</p>
-  
-            <p class="article-row-content-author">By Yeti</p>
-            <time class="article-row-content-time" datetime="2008-02-14 20:00">July 14th 2021</time>
+            <h1 class="article-row-content-header"><strong>Hangar 13 remade Mafia
+                Date published: September 24, 2020</strong> </h1>
+            <p class="article-row-content-author">Playstation</p>
+            <time class="article-row-content-time" datetime="2008-02-14 20:00">September 24, 2020 </time>
           </div>
         </article>
       </a>
   
-      <a href="#">
+      <a href="https://blog.playstation.com/2020/09/23/underwater-combat-comes-to-gundam-battle-operation-2/">
         <article class="article-row article-row-reversed">
           <div class="article-row-img">
-            <img src="https://placehold.it/200" alt="picture of a whale eating a donkey" />
+            <img class="img" src="https://blog.playstation.com/tachyon/2020/09/50356949593_f93303e9bc_k.jpg?resize=1088,612&crop_strategy=smart&zoom=1" alt="robot in water" />
           </div>
           <div class="article-row-content">
-            <h1 class="article-row-content-header">HOW TO QUIT YOUR JOB, MOVE TO PARADISE AND GET PAID TO CHANGE THE WORLD</h1>
-  
-            <p class="article-row-content-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore accusamus sint quas, odit, enim architecto officiis culpa!</p>
-  
-            <p class="article-row-content-author">By Yeti</p>
-            <time class="article-row-content-time" datetime="2008-02-14 20:00">July 14th 2021</time>
+            <h1 class="article-row-content-header"><strong>Combat comes to Gundam Battle Operation 2</strong></h1>
+            <p class="article-row-content-author">Playstation</p>
+            <time class="article-row-content-time" datetime="2008-02-14 20:00">September 23, 2020</time>
           </div>
         </article>
       </a>
   
-      <a href="#">
+      <a href="https://blog.playstation.com/2020/09/23/how-projection-first-light-went-from-game-jam-prototype-to-ps4-release/">
         <article class="article-row">
           <div class="article-row-img">
-            <img src="https://placehold.it/200" alt="picture of a whale eating a donkey" />
+            <img class="img" src="https://blog.playstation.com/tachyon/2020/09/50357752441_f051272bce_k.jpg?resize=1088,612&crop_strategy=smart&zoom=1" alt="dark girl silhouette" />
           </div>
           <div class="article-row-content">
-            <h1 class="article-row-content-header">HOW I’M GOING TO LOSE ALL MY CUSTOMERS AND WRECK MY BUSINESS</h1>
-  
-            <p class="article-row-content-description">Lorem ipsum dolor sit amet, consectetur cupiditate, unde libero quisquam ipsam debitis earum omnis aperiam nulla eaque vitae error optio tempora voluptatem, quae impedit laborum placeat. Expedita!</p>
-  
-            <p class="article-row-content-author">By Yeti</p>
-            <time class="article-row-content-time" datetime="2008-02-14 20:00">July 14th 2021</time>
+            <h1 class="article-row-content-header"><strong>Projection: First Light went from game jam prototype to PS4 release</strong></h1>
+            <p class="article-row-content-author">Playstation</p>
+            <time class="article-row-content-time" datetime="2008-02-14 20:00">September 23, 2020</time>
           </div>
         </article>
       </a>
@@ -134,13 +170,19 @@
 
   </div>
   
-  
-
 </section>
+
+    <!-- <script src="/asset/script.js"></script> -->
+    <script type="text/javascript" src="asset/js/script.js"></script>
+    <script type="text/javascript" src="asset/js/newsscript.js"></script>
+    <script type="text/javascript" src="asset/js/games.js"></script>
 
   <!-- ends of news section -->
 
-  <!-- <footer class="marketing-site-footer">
+</body>
+
+<body>
+  <footer class="marketing-site-footer">
     <div class="row medium-unstack">
       <div class="medium-4 columns">
         <h4 class="marketing-site-footer-name">Yeti Snowcone</h4>
@@ -207,9 +249,8 @@
         </div>
       </div>
     </div>
-  </footer>
-  
-   -->
-
-
+  </footer> 
 </body>
+  
+</html>
+
