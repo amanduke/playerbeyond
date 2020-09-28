@@ -7,14 +7,15 @@ var gamesList = [];
 
 // local storage functions
 storedGames();
-storedData();
+// storedData();
+renderGames();
 
 
 // Displays the games entered by the user.
 function renderGames(){
     $("#gamesList").empty();
     $("#searchInput").val("");
-    console.log(gamesList)
+    console.log(gamesList+'testing')
 
     for (i=0; i<gamesList.length; i++){
         var a = $("<a>");
@@ -162,5 +163,15 @@ function historyDisplayGames(){
     resultsName = $(this).attr("dataName");
     displayGames();
     console.log(resultsName);
-
 }
+
+
+function clearStorage() {
+window.localStorage.clear();
+}
+
+// Click to clear from local storage.
+$('#clear-storage').on('click', function(event){
+    event.preventDefault();
+    clearStorage();
+});
