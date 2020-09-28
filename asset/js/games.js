@@ -1,9 +1,5 @@
 
 
-
-
-
-
 // Open Card Reveal Click
 $('.open-button').click(function(){
     $(this).siblings('.card-reveal').toggleClass('open');
