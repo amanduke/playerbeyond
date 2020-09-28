@@ -14,8 +14,14 @@
 ## About The Project
 PlayerBeyond a gaming news app for the new gamer!  The Target Audience is people who are looking to get into gaming and does not know where to start. It’s a third party app showcasing Popular games, pro gamers, and different types of gameplay. 
 
+## Instructions
+The Player Beyond is a video gaming news app that consist of three main pages. The MAIN INDEX page, the NEWS page and the GAMES page. Each page has a nav par the directs the user to each page. On each of the pages the user can enter in a game or series in the search input bar and be given the top 5 results. Two api's from gamespot are used pull these results. The reults include the name of the games, the publish date, an image of the games's box art, a breif decsrption about the critical rectiption of the games, and the full artical itself as a review of the game. When the user be entered an example of a game or series in the search bar their results should also be displayed as text above where it says CLEAR on the main page. The user can click the CLEAR text and when the user refeshes the page the input will be removed. It will also be removed from local stoarge as well. 
+On the both the NEWS pgae and the GAMES page there is text on the left that says 'Lastes Gaming News' if clicked we should se a the top 5 newst gaming areticals from gamespot's api. This includes the title, an image, and the full artical from the latest gaming news as it is currently updated. Both the GAMES page and the NEWS page should also have recent up to date articals and or youtube videos with working links on the pages once the user loads each page. 
 
 # User Story
+AS A busy Individual that enjoy gaming and always want to know what's the next big thing
+I WANT a web site that can show me gaming news and the latest updates
+SO THAT I can keep up with my busy life and still be in the know in the gaming world
 <!-- ![Screenshot](https://user-images.githubusercontent.com/65379991/93036807-e6c70880-f60e-11ea-933f-d545608d831c.png "Screenshot") -->
 
 
