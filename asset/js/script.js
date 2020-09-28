@@ -164,14 +164,14 @@ function historyDisplayGames(){
     displayGames();
     console.log(resultsName);
 }
-
-
-function clearStorage() {
-window.localStorage.clear();
-}
-
 // Click to clear from local storage.
 $('#clear-storage').on('click', function(event){
     event.preventDefault();
     clearStorage();
 });
+
+function clearStorage() {
+window.localStorage.clear();
+}
+
+
