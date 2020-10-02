@@ -26,7 +26,7 @@ SO THAT I can keep up with my busy life and still be in the know in the gaming w
 
 
 # Screenshot 
-![Screenshot](https://user-images.githubusercontent.com/65379991/93390717-258dd600-f83c-11ea-9ed6-38ae9c2406c9.png "Screenshot")
+![Screenshot](https://user-images.githubusercontent.com/65379991/94965341-4a837980-04c9-11eb-9c59-d7814163f294.png "Screenshot")
 
 
 <!-- LICENSE -->
