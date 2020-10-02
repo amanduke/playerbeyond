@@ -33,7 +33,7 @@ SO THAT I can keep up with my busy life and still be in the know in the gaming w
 ## Project Link
 
 
-Project Link: [https://)
+Project Link: [https://amanduke.github.io/playerbeyond/)
 
 
 <!-- ACKNOWLEDGEMENTS
