@@ -9,7 +9,7 @@ body {
 }
    /* apply styles to <header> */
    header {
-    padding: 20px 35px;
+    padding: 40px 35px 25px;
   }
 
   
@@ -19,7 +19,7 @@ body {
     color: lightblue;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: inline;
-    margin: 0 55px;
+    margin: 0 55px 0;
     width: flex;
   }
   header a {
@@ -34,7 +34,7 @@ body {
   
   header nav {
     float: right;
-    margin: 7px 0;
+    margin: 18px 0 7px;
     align-content: flex-end;
     width: flex;
   }
@@ -42,6 +42,7 @@ body {
   .btnSearch {
     color: lightblue;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0 30px;
   }
   
   header nav ul li {
@@ -99,26 +100,6 @@ body {
   display: table;
   background-color: black;
 }
-
-/* @font-face {
-  font-family: sans-serif;
-  src: url (https://www.dafont.com/techno-hideo.font);
-} */
-
-
-  /* .section-title {
-    background-image: url('../images/player-beyond-logo.png');
-    background-size: 50%;
-    width: flex;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 50px;
-  } */
-
-  /* horizontal rule, can be used later on News Page */
-  /* .primary-border {
-    border-color: #fce138;
-  } */
 
 .container {
   display: middle;
