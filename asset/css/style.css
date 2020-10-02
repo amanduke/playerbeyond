@@ -42,6 +42,7 @@ body {
   .btnSearch {
     color: lightblue;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: inline-block;
   }
   
   header nav ul li {
