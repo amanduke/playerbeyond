@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  html, body {
+      height: 100%;
+  }
+  
+   /* apply styles to <header> */
+   header {
+    padding: 20px 35px;
+    background-color: #1a1a3a;
+    height: 115px;
+  }
+  
+  
+  header h1 {
+    font-weight: bold;
+    font-size: 26px;
+    color: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline;
+    margin: 0 55px;
+    padding: 20x 0;
+  }
+  header a {
+    text-decoration: none;
+    color: lightblue;
+    width: flex;
+  }
+  
+  header a:hover {
+      color: lightgrey;
+  }
+  
+  header nav {
+    float: right;
+    margin: 7px 0;
+    align-content: flex-end;
+    width: flex;
+  }
+  
+  header nav ul li {
+    display: inline;
+  }
+  
+  header nav ul li a {
+    margin: 0 30px;
+    font-weight: medium;
+    font-size: 16px;
+  }
+  
+  
+  
+  /* search bar icon */
+  
+  .search-bar-icon:before {
+    content: "\&#x1f50d";
+  }
+  
+  
+  
+  
+  
+  /* Foundation CSS */
+  
+  @media screen and (max-width: 39.9375em) {
+    .button.small-only-expanded {
+      display: block;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0; } }
+  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .button.medium-only-expanded {
+      display: block;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0; } }
+  @media screen and (max-width: 63.9375em) {
+    .button.medium-down-expanded {
+      display: block;
+      width: 63.9375em;
+      margin-right: auto;
+      margin-left: auto; } }
+  @media print, screen and (min-width: 40em) {
+    .button.medium-expanded {
+      display: block;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0; } }
+  @media screen and (min-width: 64em) and (max-width: 74.9375em) {
+    .button.large-only-expanded {
+      display: block;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0; } }
+  @media screen and (max-width: 74.9375em) {
+    .button.large-down-expanded {
+      display: block;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0; } }
+  @media print, screen and (min-width: 64em) {
+    .button.large-expanded {
+      display: block;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0; } }
+  
+  
+     
+  
+
+
+  /* conatiner for info */
+
+  @charset "UTF-8";
+
+  .news-image-gallery-container {
+    background-color: #fefefe;
+    padding: 2rem 1.5rem 1rem;
+  }
+  
+  .news-image-gallery-container .rounded-social-buttons {
+    text-align: left;
+  }
+  
+  .news-image-gallery-container .rounded-social-buttons .social-button {
+    display: inline-block;
+    width: flex;

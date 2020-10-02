@@ -39,6 +39,10 @@ body {
     width: flex;
   }
   
+  .btnSearch {
+    color: lightblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
   
   header nav ul li {
     display: inline;
@@ -76,6 +80,11 @@ body {
     opacity: 70%;
     font-style: italic;
   }
+
+
+#searchicon {
+  padding-left: inherit;
+}
   
 /* found css;
             https://codepen.io/Trinca/pen/NAvpWa
@@ -121,6 +130,17 @@ body {
   kerning: inherit;
 }
 
+.containerGames {
+  display: middle;
+  text-align: center;
+  vertical-align: middle;
+  padding: 80px 40px 45px;
+  width: flex;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  kerning: inherit;
+  border-image: auto;
+  }
+  
 .neon {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: orangered;
