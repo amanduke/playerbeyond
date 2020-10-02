@@ -20,8 +20,16 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: inline;
     margin: 0 55px;
-    width: flex;
   }
+
+  #clear-storage {
+    font-weight: bold;
+    margin:  0 90px;
+    width: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: inline-block;
+  }
+
   header a {
     text-decoration: none;
     color: lightblue;
@@ -100,26 +108,6 @@ body {
   display: table;
   background-color: black;
 }
-
-/* @font-face {
-  font-family: sans-serif;
-  src: url (https://www.dafont.com/techno-hideo.font);
-} */
-
-
-  /* .section-title {
-    background-image: url('../images/player-beyond-logo.png');
-    background-size: 50%;
-    width: flex;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 50px;
-  } */
-
-  /* horizontal rule, can be used later on News Page */
-  /* .primary-border {
-    border-color: #fce138;
-  } */
 
 .container {
   display: middle;
