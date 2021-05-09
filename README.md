@@ -16,6 +16,10 @@ PlayerBeyond a gaming news app for the new gamer!  The Target Audience is people
 
 
 # User Story
+AS A busy Individual that enjoy gaming and always want to know what's the next big thing
+I WANT a web site that can show me gaming news and the latest updates
+SO THAT I can keep up with my busy life and still be in the know in the gaming world
+
 <!-- ![Screenshot](https://user-images.githubusercontent.com/65379991/93036807-e6c70880-f60e-11ea-933f-d545608d831c.png "Screenshot") -->
 
 
