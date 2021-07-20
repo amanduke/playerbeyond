@@ -117,7 +117,7 @@
 
   /* conatiner for info */
 
-  @charset "UTF-8";
+  /* @charset "UTF-8"; */
 
   .news-image-gallery-container {
     background-color: #fefefe;
@@ -131,3 +131,4 @@
   .news-image-gallery-container .rounded-social-buttons .social-button {
     display: inline-block;
     width: flex;
+  }
